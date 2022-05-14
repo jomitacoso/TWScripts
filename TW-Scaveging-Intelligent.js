@@ -1,21 +1,3 @@
-// ==UserScript==
-// @name         Scavenging optimized Ataque
-// @description  I scavnge you scavange
-// @author       fmthemaster / BOTville
-// @include      **mode=scavenge*
-// @run-at       document-idle
-// ==/UserScript==
-
-//Creators: Sophie "Shinko to Kuma" - Mitchell "Superdog"
-//Edits: fmthemaster
-
-var refresh = 1;
-
-if(refresh == 1) {
-setInterval(function() { window.location.reload(); }, 100000)
-}
-
-
 //PROGRAM VARIABLES
 var count = 0;
 var nsteps = 200;
@@ -33,7 +15,7 @@ else {
     duration_exponent = window.ScavengeScreen.village.options[1].base.duration_exponent;
     duration_initial_seconds = window.ScavengeScreen.village.options[1].base.duration_initial_seconds;
 }
-var hours = 6;
+var hours = 4;
 var max_spear = 0;
 var max_sword = 0;
 var max_axe = -1;
@@ -380,7 +362,7 @@ function getAvailableScavanges()
 	//	NOTICE: 0 - Busca Fraca ; 1 - Busca Humilde ; 2 - Busca Inteligente ; 3 - Busca extrema.
 	//			Defenir o array com as buscas que se pretendem utiliza. Exemplo na linha seguinte
 	//			var availableScavanges  = [3,2,1]
-    var availableScavanges  = [3]
+    var availableScavanges  = [3,2,1]
 
     availableScavanges  = $.grep(availableScavanges, function(obj, index){return $("[class*='free_send_button']",$($("[class^='scavenge-option']")[obj])).length > 0})
     return availableScavanges;
