@@ -1,3 +1,21 @@
+// ==UserScript==
+// @name         Scavenging optimized Ataque
+// @description  I scavnge you scavange
+// @author       fmthemaster / BOTville
+// @include      **mode=scavenge*
+// @run-at       document-idle
+// ==/UserScript==
+
+//Creators: Sophie "Shinko to Kuma" - Mitchell "Superdog"
+//Edits: fmthemaster
+
+var refresh = 1;
+
+if(refresh == 1) {
+setInterval(function() { window.location.reload(); }, 100000)
+}
+
+
 //PROGRAM VARIABLES
 var count = 0;
 var nsteps = 200;
@@ -16,13 +34,13 @@ else {
     duration_initial_seconds = window.ScavengeScreen.village.options[1].base.duration_initial_seconds;
 }
 var hours = 6;
-var max_spear = -1;
-var max_sword = -1;
+var max_spear = 0;
+var max_sword = 0;
 var max_axe = -1;
-var max_archer = -1;
+var max_archer = 0;
 var max_light = -1;
 var max_marcher = -1;
-var max_heavy = -1;
+var max_heavy = 0;
 var refresh_time = 60;
 
 var haulsPerUnit = {"spear":25, "sword":15, "axe":10, "light":80, "heavy":50, "archer":10, "marcher":50, "knight":0};
