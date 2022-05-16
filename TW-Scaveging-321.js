@@ -1,11 +1,3 @@
-var refresh = 1;
-
-if(refresh == 1)
-{
-	setInterval(function() { window.location.reload(); }, 100000)
-}
-
-
 //PROGRAM VARIABLES
 var duration_factor, duration_exponent, duration_initial_seconds;
 var worker; //parallel thread for calculations
